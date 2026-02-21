@@ -24,7 +24,7 @@ public class ContractServices {
 			
 			LocalDate dueDate = contract.getDate().plusMonths(i);
 			double interest = onlinePaymentServices.interest(valorParcela,i);
-			double paymentFee = onlinePaymentServices.paymentFee(valorParcela);
+			double paymentFee = onlinePaymentServices.paymentFee(valorParcela + interest);
 			
 			double total = valorParcela + interest + paymentFee;
 			
